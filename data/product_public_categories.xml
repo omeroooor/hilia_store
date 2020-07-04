@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="product_public_category_men" model="product.public.category">
+            <field name="name">Men</field>
+            <field name="sequence" type="int">0</field>
+        </record>
+        <record id="product_public_category_women" model="product.public.category">
+            <field name="name">Women</field>
+            <field name="sequence" type="int">1</field>
+        </record>
+        <record id="product_public_category_children" model="product.public.category">
+            <field name="name">Children</field>
+            <field name="sequence" type="int">2</field>
+        </record>
+        <record id="product_public_category_antiques" model="product.public.category">
+            <field name="name">Antiques</field>
+            <field name="sequence" type="int">3</field>
+        </record>
+        <record id="product_public_category_collections" model="product.public.category">
+            <field name="name">Collections</field>
+            <field name="sequence" type="int">4</field>
+        </record>
+
+        <!-- Men Subcategories -->
+        <record id="product_public_category_men_daggers" model="product.public.category">
+            <field name="name">Daggers</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <record id="product_public_category_men_sticks" model="product.public.category">
+            <field name="name">Sticks</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <record id="product_public_category_men_rings" model="product.public.category">
+            <field name="name">Rings</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <record id="product_public_category_men_pen_watches" model="product.public.category">
+            <field name="name">Pens / Watches</field>
+            <field name="sequence" type="int">3</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <record id="product_public_category_men_medals" model="product.public.category">
+            <field name="name">Medals</field>
+            <field name="sequence" type="int">4</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <record id="product_public_category_men_bearishs" model="product.public.category">
+            <field name="name">Bearishs</field>
+            <field name="sequence" type="int">5</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <record id="product_public_category_men_swords" model="product.public.category">
+            <field name="name">Swords</field>
+            <field name="sequence" type="int">6</field>
+            <field name="parent_id" ref="product_public_category_men"/>
+        </record>
+        <!-- Rings Subcategories -->
+        <record id="product_public_category_men_rings_sizes" model="product.public.category">
+            <field name="name">Sizes</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_men_rings"/>
+        </record>
+        
+        <!-- Women Subcategories -->
+        <record id="product_public_category_women_modern_silver" model="product.public.category">
+            <field name="name">Modern Silver</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women"/>
+        </record>
+        <record id="product_public_category_women_traditional_silver" model="product.public.category">
+            <field name="name">Traditional Silver</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_women"/>
+        </record>
+        <!-- Modern Silver Subcategories -->
+        <record id="product_public_category_women_modern_silver_sets" model="product.public.category">
+            <field name="name">Sets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver"/>
+        </record>
+        <!-- Traditional Silver Subcategories -->
+        <record id="product_public_category_women_traditional_silver_sets" model="product.public.category">
+            <field name="name">Sets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women_traditional_silver"/>
+        </record>
+        <!-- Modern Sets Subcategories -->
+        <record id="product_public_category_women_modern_silver_sets_wedding" model="product.public.category">
+            <field name="name">Wedding Sets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_sets" model="product.public.category">
+            <field name="name">Sets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_watches" model="product.public.category">
+            <field name="name">Watches</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_anklets" model="product.public.category">
+            <field name="name">Anklets</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_necklaces" model="product.public.category">
+            <field name="name">Necklaces</field>
+            <field name="sequence" type="int">3</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_bracelets" model="product.public.category">
+            <field name="name">Bracelet</field>
+            <field name="sequence" type="int">4</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_earrings" model="product.public.category">
+            <field name="name">Earrings</field>
+            <field name="sequence" type="int">6</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_modern_silver_sets_rings" model="product.public.category">
+            <field name="name">Rings</field>
+            <field name="sequence" type="int">7</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets"/>
+        </record>
+        <!-- Rings Subcategories -->
+        <record id="product_public_category_women_modern_silver_sets_rings_size_types" model="product.public.category">
+            <field name="name">Size / Stone</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women_modern_silver_sets_rings"/>
+        </record>
+        <!-- Traditional Sets Subcategories -->
+        <record id="product_public_category_women_traditional_silver_sets_rigns_bracelets" model="product.public.category">
+            <field name="name">Rings + Bracelets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_women_traditional_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_traditional_silver_sets_necklaces" model="product.public.category">
+            <field name="name">Necklaces</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_women_traditional_silver_sets"/>
+        </record>
+        <record id="product_public_category_women_traditional_silver_sets_rings" model="product.public.category">
+            <field name="name">Rings</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="product_public_category_women_traditional_silver_sets"/>
+        </record>
+
+        
+        <!-- Children Subcategories -->
+        <record id="product_public_category_children_boys" model="product.public.category">
+            <field name="name">Boys</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children"/>
+        </record>
+        <record id="product_public_category_children_babies" model="product.public.category">
+            <field name="name">Babies</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_children"/>
+        </record>
+        <record id="product_public_category_children_girls" model="product.public.category">
+            <field name="name">Girls</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="product_public_category_children"/>
+        </record>
+        <!-- Boys Subcategories -->
+        <record id="product_public_category_children_boys_daggers" model="product.public.category">
+            <field name="name">Daggers</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children_boys"/>
+        </record>
+        <record id="product_public_category_children_boys_sticks" model="product.public.category">
+            <field name="name">Sticks</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_children_boys"/>
+        </record>
+        <record id="product_public_category_children_boys_swords" model="product.public.category">
+            <field name="name">Swords</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="product_public_category_children_boys"/>
+        </record>
+        <record id="product_public_category_children_boys_rings" model="product.public.category">
+            <field name="name">Rings</field>
+            <field name="sequence" type="int">3</field>
+            <field name="parent_id" ref="product_public_category_children_boys"/>
+        </record>
+        <!-- Rings Subcategories -->
+        <record id="product_public_category_children_boys_rings_sizes" model="product.public.category">
+            <field name="name">Sizes</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children_boys_rings"/>
+        </record>
+        <!-- Girls Subcategories -->
+        <record id="product_public_category_children_girls_sets" model="product.public.category">
+            <field name="name">Sets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children_girls"/>
+        </record>
+        <!-- Girls Sets Subcategories -->
+        <record id="product_public_category_children_girls_sets_modern" model="product.public.category">
+            <field name="name">Modern Sets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_traditional" model="product.public.category">
+            <field name="name">Traditional Sets</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets"/>
+        </record>
+        <!-- Girls Modern Sets Subcategories -->
+        <record id="product_public_category_children_girls_sets_modern_bracelets" model="product.public.category">
+            <field name="name">Bracelets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_modern"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_modern_necklaces" model="product.public.category">
+            <field name="name">Necklaces</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_modern"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_modern_rings" model="product.public.category">
+            <field name="name">Rings</field>
+            <field name="sequence" type="int">3</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_modern"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_modern_rings_bracelets" model="product.public.category">
+            <field name="name">Rings + Bracelets</field>
+            <field name="sequence" type="int">4</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_modern"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_modern_anklets" model="product.public.category">
+            <field name="name">Anklets</field>
+            <field name="sequence" type="int">5</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_modern"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_modern_earrings" model="product.public.category">
+            <field name="name">Earrings</field>
+            <field name="sequence" type="int">6</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_modern"/>
+        </record>
+        <!-- Girls Traditional Sets Subcategories -->
+        <record id="product_public_category_children_girls_sets_traditional_bracelets" model="product.public.category">
+            <field name="name">Bracelets</field>
+            <field name="sequence" type="int">0</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_traditional"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_traditional_necklaces" model="product.public.category">
+            <field name="name">Necklaces</field>
+            <field name="sequence" type="int">1</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_traditional"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_traditional_earrings" model="product.public.category">
+            <field name="name">Earrings</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_traditional"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_traditional_rings" model="product.public.category">
+            <field name="name">Rings</field>
+            <field name="sequence" type="int">3</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_traditional"/>
+        </record>
+        <record id="product_public_category_children_girls_sets_traditional_other" model="product.public.category">
+            <field name="name">Other</field>
+            <field name="sequence" type="int">4</field>
+            <field name="parent_id" ref="product_public_category_children_girls_sets_traditional"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,192 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hilia_store
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180602\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-04 17:41+0000\n"
+"PO-Revision-Date: 2020-07-04 17:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_anklets
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_anklets
+msgid "Anklets"
+msgstr "خلاخل"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_antiques
+msgid "Antiques"
+msgstr "تحف وهدايا"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_babies
+msgid "Babies"
+msgstr "حديثي الولادة"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_men_bearishs
+msgid "Bearishs"
+msgstr "سبح"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_boys
+msgid "Boys"
+msgstr "الاولاد"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_bracelets
+msgid "Bracelet"
+msgstr "اساور"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_bracelets
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional_bracelets
+msgid "Bracelets"
+msgstr "اساور"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children
+msgid "Children"
+msgstr "اطفال"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_collections
+msgid "Collections"
+msgstr "كوليكشن"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_boys_daggers
+#: model:product.public.category,name:hilia_store.product_public_category_men_daggers
+msgid "Daggers"
+msgstr "الخناجر"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_earrings
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional_earrings
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_earrings
+msgid "Earrings"
+msgstr "حلق"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls
+msgid "Girls"
+msgstr "البنات"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_men_medals
+msgid "Medals"
+msgstr "ميداليات"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_men
+msgid "Men"
+msgstr "رجال"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern
+msgid "Modern Sets"
+msgstr "اطقم حديثة"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver
+msgid "Modern Silver"
+msgstr "فضة حديثة"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_necklaces
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional_necklaces
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_necklaces
+#: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver_sets_necklaces
+msgid "Necklaces"
+msgstr "عقد"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional_other
+msgid "Other"
+msgstr "مفرق / دينار"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_men_pen_watches
+msgid "Pens / Watches"
+msgstr "اقلام / ساعات"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_boys_rings
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_rings
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional_rings
+#: model:product.public.category,name:hilia_store.product_public_category_men_rings
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_rings
+#: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver_sets_rings
+msgid "Rings"
+msgstr "الخواتم"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_rings_bracelets
+#: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver_sets_rigns_bracelets
+msgid "Rings / Bracelets"
+msgstr "خواتم وأساور"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_sets
+#: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver_sets
+msgid "Sets"
+msgstr "الاطقم"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_rings_size_types
+msgid "Size / Stone"
+msgstr "القياس والحجر"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_boys_rings_sizes
+#: model:product.public.category,name:hilia_store.product_public_category_men_rings_sizes
+msgid "Sizes"
+msgstr "المقاسات"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_boys_sticks
+#: model:product.public.category,name:hilia_store.product_public_category_men_sticks
+msgid "Sticks"
+msgstr "العصي"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_boys_swords
+#: model:product.public.category,name:hilia_store.product_public_category_men_swords
+msgid "Swords"
+msgstr "سيوف"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional
+msgid "Traditional Sets"
+msgstr "الاطقم التقليدية"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver
+msgid "Traditional Silver"
+msgstr "فضة تقليدية"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_watches
+msgid "Watches"
+msgstr "ساعات"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women_modern_silver_sets_wedding
+msgid "Wedding Sets"
+msgstr "اطقم عرائس"
+
+#. module: hilia_store
+#: model:product.public.category,name:hilia_store.product_public_category_women
+msgid "Women"
+msgstr "نساء"
+
