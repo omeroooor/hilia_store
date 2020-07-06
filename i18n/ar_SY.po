@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0-20180602\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-04 17:41+0000\n"
-"PO-Revision-Date: 2020-07-04 17:41+0000\n"
+"POT-Creation-Date: 2020-07-06 09:56+0000\n"
+"PO-Revision-Date: 2020-07-06 09:56+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_cart_lines
+msgid "<small><i class=\"fa fa-trash-o\"/> Remove (<font color=\"#000\">remove to be able to chose another packaging option</font>)</small>"
+msgstr "<small><i class=\"fa fa-trash-o\"/> Remove (<font color=\"#000\">remove to be able to chose another packaging option</font>)</small>"
 
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_anklets
@@ -81,6 +86,12 @@ msgid "Girls"
 msgstr "البنات"
 
 #. module: hilia_store
+#: model:ir.model.fields,field_description:hilia_store.field_product_product_is_packaging_service
+#: model:ir.model.fields,field_description:hilia_store.field_product_template_is_packaging_service
+msgid "Is packaging service?"
+msgstr "خدمة تغليف؟"
+
+#. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_men_medals
 msgid "Medals"
 msgstr "ميداليات"
@@ -109,14 +120,34 @@ msgid "Necklaces"
 msgstr "عقد"
 
 #. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_packaging
+msgid "No Thanks"
+msgstr "لا شكراً"
+
+#. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_traditional_other
 msgid "Other"
 msgstr "مفرق / دينار"
 
 #. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_packaging
+msgid "Packaging Options"
+msgstr "خيارات التغليف"
+
+#. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_men_pen_watches
 msgid "Pens / Watches"
 msgstr "اقلام / ساعات"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_packaging
+msgid "Please choose one of the following packaging options:"
+msgstr "الرجاء إختيار واحدة من خيارات التغليف التالية:"
+
+#. module: hilia_store
+#: model:ir.model,name:hilia_store.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
 
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_boys_rings
@@ -131,8 +162,15 @@ msgstr "الخواتم"
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_rings_bracelets
 #: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver_sets_rigns_bracelets
-msgid "Rings / Bracelets"
-msgstr "خواتم وأساور"
+msgid "Rings + Bracelets"
+msgstr "Rings + Bracelets"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_packaging
+msgid "Select \n"
+"                                            <span class=\"fa fa-shopping-cart\"/>"
+msgstr "إختيار \n"
+"                                            <span class=\"fa fa-shopping-cart\"/>"
 
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets

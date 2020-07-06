@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hilia_packaging" inherit_id="website_sale.cart" name="Hilia Packaging">
+        <xpath expr="//div[@id='wrap']" position="after">
+            <div class="modal" tabindex="-1" role="dialog" id="packaging_options_modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Packaging Options</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <!--span aria-hidden="true">x</span-->
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please choose one of the following packaging options:</p>
+                             <t t-foreach="packaging_ids" t-as="package">
+                                <form action="/shop/cart/update" method="post" class="row oe_website_sale">
+                                    <div class="col-sm-2">
+                                        <span t-field="package.image_small" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <strong t-esc="package.display_name" />
+                                        <br/>
+                                        <small t-esc="package.description_sale"></small>
+                                    </div>
+                                    <div class="col-sm-2 text-center">
+                                        <b>
+                                            <t t-if="package.website_price_difference and website.get_current_pricelist().discount_policy=='without_discount'">
+                                                <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(package.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+                                            </t>
+
+                                            <span t-esc="package.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                            <span itemprop="price" style="display:none;" t-esc="package.website_price" />
+                                            <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                                        </b>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                        <input name="product_id" t-att-value="package.product_variant_id.id" type="hidden" />
+                                        <a class="btn btn-primary a-submit">
+                                            Select 
+                                            <span class="fa fa-shopping-cart" />
+                                        </a>
+                                    </div>
+                                </form>
+                             </t>
+                        </div>
+                        <div class="modal-footer">
+                            <!--button type="button" class="btn btn-primary">Save changes</button-->
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <t t-if="len(selected_packaging_ids) == 0 and len(packaging_ids) &gt; 0">
+                <script>
+                    $('#packaging_options_modal').modal('show');
+                </script>
+            </t>
+       </xpath>
+    </template>
+
+    
+    <template id="hilia_cart_lines" inherit_id="website_sale.cart_lines" name="Hilia Shoping Cart Lines">
+        <xpath expr="//tbody/t/tr[1]" position="attributes">
+            <attribute name="t-if">not line.product_id.is_packaging_service</attribute>
+        </xpath>
+        <xpath expr="//tbody" position="after">
+            <tfooter>
+                <t t-foreach="website_sale_order.website_order_line" t-as="line">
+                    <tr t-if="line.product_id.is_packaging_service">
+                        <td colspan="2" t-if="not line.product_id.product_tmpl_id"></td>
+                        <td align="center" t-if="line.product_id.product_tmpl_id">
+                            <span t-field="line.product_id.image_small" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
+                        </td>
+                        <td t-if="line.product_id.product_tmpl_id" colspan="2">
+                            <div>
+                                <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
+                                    <strong t-esc="line.product_id.with_context(display_default_code=False).display_name" />
+                                </a>
+                            </div>
+                            <div class="text-muted">
+                                <t t-foreach="line.name.splitlines()[1:]" t-as="name_line">
+                                    <span><t t-esc="name_line"/></span><br/>
+                                </t>
+                            </div>
+                            <input type="text" class="js_quantity form-control quantity" style="display:none" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id" t-att-value="int(line.product_uom_qty) == line.product_uom_qty and int(line.product_uom_qty) or line.product_uom_qty" />
+                            <a href='#' class='js_delete_product no-decoration'> <small><i class='fa fa-trash-o'></i> Remove (<font color='#000'>remove to be able to chose another packaging option</font>)</small></a>
+                        </td>
+                        <td class="text-center" id="td-price" name="price">
+                            <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+                            </t>
+                            <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal" />
+                            <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total" />
+                        </td>
+                    </tr>
+                </t>
+            </tfooter>
+        </xpath>
+    </template>
+</odoo>
