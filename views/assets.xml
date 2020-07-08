@@ -2,7 +2,10 @@
 <odoo>
     <template id="hilia_assets" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
+            <link href="/hilia_store/static/src/css/megamenu.css" rel="stylesheet"/>
+
 		    <script type="text/javascript" src="/hilia_store/static/src/js/packaging.js"/> 
+		    <script type="text/javascript" src="/hilia_store/static/src/js/megamenu.js"/> 
         </xpath>
     </template>
 </odoo>

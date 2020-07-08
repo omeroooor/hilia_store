@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hilia_submenu" inherit_id="theme_laze.submenu" name="Hilia Submenu">
+        <xpath expr="//div[1]" position="attributes">
+            <attribute name="t-attf-class">mm-maga-main mm-mega-list #{submenu.content_id.main_content_type=='category_list_3' and 'mm-mega-cat-level' or ''} #{ submenu.content_id.no_of_columns and 'mm-mega-'+str(submenu.content_id.no_of_columns) or ''}</attribute>
+        </xpath>
+        <xpath expr="//div[1]" position="inside">
+            <t t-if="submenu.content_id.main_content_type=='category_list_3'">	
+                <t t-if="submenu.content_id.category_ids">
+                    <div class="mm-maga-main-width">
+                        <ul class="mm-category-level">      
+	
+                            <t t-if="submenu.content_id.category_ids">
+                                <t t-foreach="submenu.content_id.category_ids" t-as="category">
+                                    <t t-if="not category.parent_id">
+                                        <li class="mm-cat-level-1">
+                                            <div class="cat-level-title">
+                                                <a t-att-href="'/shop/category/%s' % slug(category)">
+                                                    <span class="icon">
+                                                        <img t-att-src="website.image_url(category,'image')"/>
+                                                    </span>
+                                                    <span t-field="category.name"/>
+                                                </a>
+                                            </div>
+                                            <span class="mob_menu"></span>
+                                            <div class="mm-cat-level-2">
+                                                <div class="mm-cat-level-2-inner">
+                                                    <t t-foreach="submenu.content_id.category_ids" t-as="category1">
+                                                        <t t-if="category1.parent_id and category1.parent_id.id==category.id">
+                                                            <ul class="mm-cat-list">
+                                                                <li class="mm-heading">
+                                                                    <a t-att-href="'/shop/category/%s' % slug(category1)">
+                                                                        <span t-field="category1.name"/>
+                                                                    </a>
+                                                                </li>
+                                                                <t t-foreach="submenu.content_id.category_ids" t-as="category2">
+                                                                    <t t-if="category2.parent_id and category2.parent_id.id==category1.id">
+                                                                        <li>
+                                                                            <a t-att-href="'/shop/category/%s' % slug(category2)">
+                                                                                <span t-field="category2.name"/>
+                                                                            </a>
+                                                                        </li>
+                                                                    </t>
+                                                                </t>
+                                                            </ul>   
+                                                        </t>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </t>
+                                </t>
+                            </t>
+
+                        </ul>
+                    </div>
+                </t>											
+            </t>  
+        </xpath>
+    </template>
+</odoo>
+
