@@ -7,5 +7,9 @@
 		    <script type="text/javascript" src="/hilia_store/static/src/js/packaging.js"/> 
 		    <script type="text/javascript" src="/hilia_store/static/src/js/megamenu.js"/> 
         </xpath>
+
+        <xpath expr="link[last()]" position="after">
+            <link href="/hilia_store/static/src/css/mobile_bottom_navbar.css" rel="stylesheet"/>
+        </xpath>
     </template>
 </odoo>

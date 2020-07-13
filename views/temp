@@ -1,0 +1,198 @@
+
+                            <li class="mm-cat-level-1">
+                                <div class="cat-level-title">
+                                    <a href="/shop/category/kids-brand-appliances-55">
+                                        <span class="icon">
+                                            <img src="/web/image/megamenu.categories_menu_lines/1/image?unique=07b04e6" alt="Appliances"/>
+                                        </span>
+                                        <span>Appliances</span>
+                                    </a>
+                                </div>
+                                <span class="mob_menu"></span>
+                                <div class="mm-cat-level-2">
+                                    <div class="mm-cat-level-2-inner">
+                                        <ul class="mm-cat-list">
+                                            <li class="mm-heading">
+                                                <a href="/shop/category/kids-brand-appliances-air-conditioners-71">
+                                                    <span>Air Conditioners</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-air-conditioners-central-acs-75">
+                                                    <span>Central ACs</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-air-conditioners-window-acs-74">
+                                                    <span>Window ACs</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-air-conditioners-split-acs-73">
+                                                    <span>Split ACs</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-air-conditioners-inverter-ac-72">
+                                                    <span>Inverter AC</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="mm-cat-list">
+                                            <li class="mm-heading">
+                                                <a href="/shop/category/kids-brand-appliances-washing-machine-56">
+                                                    <span>Washing Machine</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-washing-machine-fully-automatic-top-load-60">
+                                                    <span>Fully Automatic Top Load</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-washing-machine-semi-automatic-top-load-59">
+                                                    <span>Semi Automatic Top Load</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-washing-machine-fully-automatic-front-load-58">
+                                                    <span>Fully Automatic Front Load</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-washing-machine-automatic-top-load-57">
+                                                    <span>Automatic Top Load</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="mm-cat-list">
+                                            <li class="mm-heading">
+                                                <a href="/shop/category/kids-brand-appliances-kitchen-appliances-61">
+                                                    <span>Kitchen Appliances</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-kitchen-appliances-electric-kettle-65">
+                                                    <span>Electric Kettle</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-kitchen-appliances-juicer-mixer-grinder-64">
+                                                    <span>Juicer/Mixer/Grinder</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-kitchen-appliances-oven-toaster-grills-63">
+                                                    <span>Oven Toaster Grills</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-kitchen-appliances-microwave-ovens-62">
+                                                    <span>Microwave Ovens</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="mm-cat-list">
+                                            <li class="mm-heading">
+                                                <a href="/shop/category/kids-brand-appliances-refrigerators-66">
+                                                    <span>Refrigerators</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-refrigerators-side-by-side-70">
+                                                    <span>Side by Side</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-refrigerators-triple-door-69">
+                                                    <span>Triple door</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-refrigerators-double-door-68">
+                                                    <span>Double Door</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/shop/category/kids-brand-appliances-refrigerators-single-door-67">
+                                                    <span>Single Door</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+
+                            
+jQuery(document).ready(function($){
+    var offset=300,offset_opacity=1200,scroll_top_duration=700,$back_to_top=$('.cd-top');
+    $(window).scroll(function(){
+        ($(this).scrollTop()>offset)?$back_to_top.addClass('cd-is-visible'):$back_to_top.removeClass('cd-is-visible cd-fade-out');
+        if($(this).scrollTop()>offset_opacity){$back_to_top.addClass('cd-fade-out');}});
+        $back_to_top.on('click',function(event){event.preventDefault();$('body,html').animate({scrollTop:0,},scroll_top_duration);});
+        $("header .search_open").on("click",function(event){$(".h-search").toggleClass("hm-search-open");event.stopPropagation();});
+        $(".h-search").on("click",function(event){event.stopPropagation();});$(document).on("click",function(event){$(".h-search").removeClass("hm-search-open");});
+        $("header .mobile_toggle_menu").click(function(){$('body').toggleClass("mob-main-nav-open");});
+        $(".mm-mega-menu > a").after("<span class='mob_menu'></span>")
+        $(".mm-cat-level-1 .cat-level-title").after("<span class='mob_menu'></span>")
+        $(".mm-mega-menu .mob_menu").click(function(){
+            $(this).parent('li').toggleClass("open-mob-menu");
+            $(this).toggleClass("mob-menu-open");
+        });
+        $(".navbar-top-collapse .dropdown > .dropdown-toggle").after("<span class='mob_menu' data-toggle='dropdown' aria-expanded='false'></span>")
+        $(".navbar-top-collapse .dropdown .mob_menu").click(function(){});
+        $('.counter-portfolio').counterUp({delay:20,time:1000});
+        $('.counter-blog-template').counterUp({delay:20,time:1000});
+        $('.counter-shortcut').counterUp({delay:20,time:1000});
+        $('.counter-like').counterUp({delay:20,time:1000});
+        $("img.sub-images").click(function(ev){
+            ev.preventDefault();ev.stopPropagation();
+            $('.product_detail_img').attr('src',this.src)
+            ;$('.product_detail_img').parent().parent().attr('src',this.src);
+        });
+    });
+
+    $(document).ready(function(){
+        $(".carousel").on("touchstart",function(event){
+            var xClick=event.originalEvent.touches[0].pageX;
+            $(this).one("touchmove",function(event){
+                var xMove=event.originalEvent.touches[0].pageX;
+                if(Math.floor(xClick-xMove)>5){
+                    $(this).carousel('next');
+                }
+                else if(Math.floor(xClick-xMove)<-5){
+                    $(this).carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend",function(){$(this).off("touchmove");});
+        });
+        $('#getting-started').countdown('2020/10/10',function(event){var $this=$(this).html(event.strftime(''
++'<ul>'
++'<li><span>%d</span><label>days</label></li>'
++'<li><span>%H</span><label>hr</label></li>'
++'<li><span>%M</span><label>min</label></li>'
++'<li><span>%S</span><label>sec</label></li>'
++'</ul>'));
+});
+});
+
+$(document).on('mouseenter','header li.mm-mega-menu',function(){
+    if($(this).find(".mm-maga-main.mm-mega-cat-level").length>0){
+        var $first_tab=$(this).find(".mm-category-level .mm-cat-level-1:eq(0)");
+        $first_tab.find(".cat-level-title").addClass("active-li");
+        $first_tab.find(".mm-cat-level-2").addClass("menu-active");
+    }
+});
+$(document).on('mouseenter','.mm-cat-level-1',function(){
+    var $first_div=$(this).find('.cat-level-title');
+    $first_div.addClass("active-li");
+    $(this).find('.mm-cat-level-2').addClass("menu-active");
+});
+$(document).on('mouseleave','.mm-cat-level-1',function(){
+    var $first_div=$(this).find('.cat-level-title')
+    $first_div.removeClass("active-li");
+    $(this).find('.mm-cat-level-2').removeClass("menu-active");
+});;

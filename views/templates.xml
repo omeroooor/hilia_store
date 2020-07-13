@@ -60,43 +60,248 @@
        </xpath>
     </template>
 
+    <template id="layout_mobile_bottom_nav_bar" inherit_id="website.layout" customize_show="True" name="Show Logo">
+	    <xpath expr="//header" position="inside">
+            <div class="mobile-top">
+                <div class="logo">
+                    <img src="/hilia_store/static/src/img/mobile-header.png"/>
+                </div>
+                <div class="cart">
+                    <div class="notification">
+                        <a href="#"><img src="/hilia_store/static/src/img/notifications.png"/></a>
+                    </div>
+                    <div class="cart">
+                        <a href="/shop/product/whishlists"><img src="/hilia_store/static/src/img/favorite.png"/></a>
+                        <a href="/shop/cart"><img src="/hilia_store/static/src/img/cart.png"/></a>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="input-icons">
+                        <form action='/shop' method="get">
+                            <input type="text" name="search" placeholder="Search" class="input-field" t-att-value="search"/>
+                            <i class="fa fa-search icon"></i>
+                        </form>
+                    </div>
+                    <i class="fa fa-camera"></i>
+                </div>
+                <div class="categories">
+                    <t t-foreach="website.get_first_level_categories()" t-as="category">
+                         <div class="category-item">
+                            <div class="img">
+                                <a t-att-href="'/shop/category/%s' % slug(category)">
+                                    <img t-att-src="website.image_url(category,'image')"/>
+                                </a>
+                            </div>
+                            <a t-att-href="'/shop/category/%s' % slug(category)">
+                                <span t-field="category.name"/>
+                            </a>
+                        </div>
+                    </t>
+                </div>
+
+                <div class="hilia-loader">
+                    <img src="/hilia_store/static/src/img/spining-logo.png" class="spining" width="120px" height="120px"/>
+                    <img src="/hilia_store/static/src/img/loading-text.png" class="loading-text" width="120px" height="60px"/>
+                </div>
+            </div>
+
+            <div class="mobile-bottom-nav-bar">
+                <div class="mobile-nav-button mobile-col mobile-col-2">
+                    <a href="/" class="mobile-button-link">
+                        <img src="/hilia_store/static/src/img/home.png" class="mobile-button-image"/>
+                    </a>
+                </div>
+                <div class="mobile-nav-button mobile-col  mobile-col-6">
+                    <div class="extra-circle">
+                        <a href="#" class="mobile-button-link">
+                            <img src="/hilia_store/static/src/img/hilia_circle.png" class="mobile-main-image"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-nav-button mobile-col mobile-col-2">
+                    <a href="/my/home" class="mobile-button-link">
+                        <img src="/hilia_store/static/src/img/user.png" class="mobile-button-image"/>
+                    </a>
+                </div>
+            </div>
+	    </xpath>   
+	</template>
+
     
     <template id="hilia_cart_lines" inherit_id="website_sale.cart_lines" name="Hilia Shoping Cart Lines">
         <xpath expr="//tbody/t/tr[1]" position="attributes">
             <attribute name="t-if">not line.product_id.is_packaging_service</attribute>
         </xpath>
         <xpath expr="//tbody" position="after">
-            <tfooter>
-                <t t-foreach="website_sale_order.website_order_line" t-as="line">
-                    <tr t-if="line.product_id.is_packaging_service">
-                        <td colspan="2" t-if="not line.product_id.product_tmpl_id"></td>
-                        <td align="center" t-if="line.product_id.product_tmpl_id">
-                            <span t-field="line.product_id.image_small" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
-                        </td>
-                        <td t-if="line.product_id.product_tmpl_id" colspan="2">
-                            <div>
-                                <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
-                                    <strong t-esc="line.product_id.with_context(display_default_code=False).display_name" />
-                                </a>
-                            </div>
-                            <div class="text-muted">
-                                <t t-foreach="line.name.splitlines()[1:]" t-as="name_line">
-                                    <span><t t-esc="name_line"/></span><br/>
+            <t t-if="website_sale_order and website_sale_order.website_order_line">
+                <tfooter>
+                    <t t-foreach="website_sale_order.website_order_line" t-as="line">
+                        <tr t-if="line.product_id.is_packaging_service">
+                            <td colspan="2" t-if="not line.product_id.product_tmpl_id"></td>
+                            <td align="center" t-if="line.product_id.product_tmpl_id">
+                                <span t-field="line.product_id.image_small" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
+                            </td>
+                            <td t-if="line.product_id.product_tmpl_id" colspan="2">
+                                <div>
+                                    <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
+                                        <strong t-esc="line.product_id.with_context(display_default_code=False).display_name" />
+                                    </a>
+                                </div>
+                                <div class="text-muted">
+                                    <t t-foreach="line.name.splitlines()[1:]" t-as="name_line">
+                                        <span><t t-esc="name_line"/></span><br/>
+                                    </t>
+                                </div>
+                                <input type="text" class="js_quantity form-control quantity" style="display:none" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id" t-att-value="int(line.product_uom_qty) == line.product_uom_qty and int(line.product_uom_qty) or line.product_uom_qty" />
+                                <a href='#' class='js_delete_product no-decoration'> <small><i class='fa fa-trash-o'></i> Remove (<font color='#000'>remove to be able to chose another packaging option</font>)</small></a>
+                            </td>
+                            <td class="text-center" id="td-price" name="price">
+                                <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
                                 </t>
-                            </div>
-                            <input type="text" class="js_quantity form-control quantity" style="display:none" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id" t-att-value="int(line.product_uom_qty) == line.product_uom_qty and int(line.product_uom_qty) or line.product_uom_qty" />
-                            <a href='#' class='js_delete_product no-decoration'> <small><i class='fa fa-trash-o'></i> Remove (<font color='#000'>remove to be able to chose another packaging option</font>)</small></a>
-                        </td>
-                        <td class="text-center" id="td-price" name="price">
-                            <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
-                                <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
-                            </t>
-                            <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal" />
-                            <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total" />
-                        </td>
-                    </tr>
-                </t>
-            </tfooter>
+                                <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal" />
+                                <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total" />
+                            </td>
+                        </tr>
+                    </t>
+                </tfooter>
+            </t>
         </xpath>
     </template>
+
+    <template id="hilia_store_layout_logo_show" inherit_id="theme_laze.layout_logo_show" customize_show="True" name="Show Logo">
+	    <xpath expr="//div[@class='logo']//img[@src='/theme_laze/static/src/img/logo.png']" position="attributes">
+        <attribute name="src">/hilia_store/static/src/img/logo.png</attribute>
+        <attribute name="width">152px</attribute>
+        <attribute name="height">51px</attribute>
+        <attribute name="title">Hilia</attribute>
+	    </xpath> 
+	</template>
+
+
+    <template id="hilia_mobille_cart" inherit_id="website_sale.cart" name="Hilia Shopping Cart">
+        <xpath expr="//div[@id='wrap']/div[1]" position="inside">
+            <div class="hilia-mobile-cart">
+                <div t-if="not website_sale_order or not website_sale_order.website_order_line" class="js_cart_lines well well-lg">
+                    Your cart is empty!
+                </div>
+                <t t-if="website_sale_order and website_sale_order.website_order_line">
+                    <div class="row hilia-cart-item" t-foreach="website_sale_order.website_order_line" t-as="line">
+                        <div class="item-image">
+                            <span t-field="line.product_id.image_small" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
+                            <!--<a href='#' class='js_delete_product no-decoration'><i class='fa fa-trash-o'></i> إزالة</a>-->
+                        </div>
+                        <div class="item-description">
+                            <div dir="rtl" class="product-name">
+                                <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
+                                <strong>المنتج: <strong t-esc="line.product_id.with_context(display_default_code=False).display_name" /></strong>
+                                </a>
+                            </div>
+                            <br/>
+                            <div dir="rtl" class="product-price">
+                                <strong>
+                                    السعر: 
+                                    <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                        <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+                                    </t>
+                                    <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal" />
+                                    <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total" />
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row discount-code" dir="rtl">
+                        <div class="dsicount-text"><strong>أدخل كود الخصم</strong></div>
+                        <div class="dsicount-action">
+                            <form action="/shop/pricelist" method="post">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                <input type="text" class="discount" name="promo" t-att-value="website_sale_order.pricelist_id.code or None"/>
+                                <button class="btn btn-danger a-submit">أضف</button>
+                            </form>
+                        </div>
+                    </div>
+                </t>
+
+                <div class="space-filling"></div>
+
+                <div class="cart-summary" dir="rtl" t-if="website_sale_order and website_sale_order.website_order_line">
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-4 text-left"><t t-esc="website_sale_order.amount_total" /> ريال</div>
+                        <div class="col-xs-6">سعر المنتجات:</div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <t t-if="website_sale_order.amount_total &gt;= 60">
+                            <div class="col-xs-4 text-left">مجاناً</div>
+                            <t t-set="delivery_cost" t-value="0"/>
+                        </t>
+                        <t  t-if="website_sale_order.amount_total &lt; 60">
+                            <div class="col-xs-4 text-left">2 ريال</div>
+                            <t t-set="delivery_cost" t-value="2"/>
+                        </t>
+                        <div class="col-xs-6">سعر التوصيل:</div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <t t-if="website_sale_order.amount_total &lt; 60">
+                                <p style="font-size: 8pt; margin-top:4px">
+                                    <t t-set="delivery_free_amount" t-value="60 - website_sale_order.amount_total"/>
+                                    تسوق بمبلغ 
+                                    <span style="color: darkred">
+                                        <t t-esc="delivery_free_amount"/> ريال
+                                    </span> 
+                                    إضافي للحصول على خدمة توصيل مجاناً
+                                </p>
+                            </t>
+                            <hr style="width:30%;margin-top:4px;margin-bottom:4px;border-top:2px solid #000;"/>
+                            المجموع:
+                            <t t-set="total" t-value="website_sale_order.amount_total + delivery_cost"/>
+                            <t t-esc="total"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a href="/shop/checkout" class="btn btn-danger">تنفيذ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    
+    <template id="hilia_mobille_checkout" inherit_id="website_sale.checkout" name="Hilia Shopping Checkout">
+        <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[1]" position="attributes">
+            <attribute name="style">display: block !important;</attribute>
+        </xpath>
+    </template>
+
+    <template id="hilia_mobille_address" inherit_id="website_sale.address" name="Hilia Billing Address">
+        <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[1]" position="attributes">
+            <attribute name="style">display: block !important;</attribute>
+        </xpath>
+        <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[2]" position="after">
+            <div class="space-filling"></div>
+        </xpath>
+    </template>
+    
+    <template id="hilia_mobille_checkout" inherit_id="website_sale.payment" name="Hilia Shopping Checkout">
+        <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[2]" position="attributes">
+            <attribute name="style">display: block !important;</attribute>
+        </xpath>
+    </template>
+
+    <template id="hilia_mobille_confirmation" inherit_id="website_sale.confirmation" name="Hilia Confirmation">
+        <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[1]/div[2]" position="attributes">
+            <attribute name="style">display: block !important;</attribute>
+        </xpath>
+        <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[2]" position="after">
+            <div class="space-filling"></div>
+        </xpath>
+    </template>
+
 </odoo>

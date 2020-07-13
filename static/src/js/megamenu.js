@@ -22,6 +22,9 @@ $(document).on('mouseleave','.mm-cat-level-1',function(){
 
 
 jQuery(document).ready(function($){
+    // Hide Loader
+    $(".hilia-loader").hide();
+
     $("header .search_open").on("click",function(event){
         $(".h-search").toggleClass("hm-search-open");
         event.stopPropagation();

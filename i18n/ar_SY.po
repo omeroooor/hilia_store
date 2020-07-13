@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0-20180602\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-06 09:56+0000\n"
-"PO-Revision-Date: 2020-07-06 09:56+0000\n"
+"POT-Creation-Date: 2020-07-08 20:07+0000\n"
+"PO-Revision-Date: 2020-07-08 20:07+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. module: hilia_store
 #: model:ir.ui.view,arch_db:hilia_store.hilia_cart_lines
 msgid "<small><i class=\"fa fa-trash-o\"/> Remove (<font color=\"#000\">remove to be able to chose another packaging option</font>)</small>"
-msgstr "<small><i class=\"fa fa-trash-o\"/> Remove (<font color=\"#000\">remove to be able to chose another packaging option</font>)</small>"
+msgstr "<small><i class=\"fa fa-trash-o\"/> إزالة (<font color=\"#000\">يجب إزالة خيار التغليف هذا حتى تتمكن من اختيار خيار آخر</font>)</small>"
 
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_anklets
@@ -84,6 +84,11 @@ msgstr "حلق"
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls
 msgid "Girls"
 msgstr "البنات"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_store_layout_logo_show
+msgid "Hilia"
+msgstr "حلية"
 
 #. module: hilia_store
 #: model:ir.model.fields,field_description:hilia_store.field_product_product_is_packaging_service
@@ -163,7 +168,7 @@ msgstr "الخواتم"
 #: model:product.public.category,name:hilia_store.product_public_category_children_girls_sets_modern_rings_bracelets
 #: model:product.public.category,name:hilia_store.product_public_category_women_traditional_silver_sets_rigns_bracelets
 msgid "Rings + Bracelets"
-msgstr "Rings + Bracelets"
+msgstr "اساور + خواتم"
 
 #. module: hilia_store
 #: model:ir.ui.view,arch_db:hilia_store.hilia_packaging
@@ -227,4 +232,9 @@ msgstr "اطقم عرائس"
 #: model:product.public.category,name:hilia_store.product_public_category_women
 msgid "Women"
 msgstr "نساء"
+
+#. module: hilia_store
+#: model:ir.model,name:hilia_store.model_megamenu_content
+msgid "megamenu.content"
+msgstr "megamenu.content"
 

@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'BR';
+    src: url('/hilia_store/static/src/font/DroidKufi-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AR';
+    src: url('/hilia_store/static/src/font/AraJozoor-Regular.otf') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'Lateef';
+    src: url('/hilia_store/static/src/font/Lateef-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ElMessiri-Bold';
+    src: url('/hilia_store/static/src/font/ElMessiri-Bold.ttf') format('truetype');
+}
+
+
+@media (min-width: 768px){
+    .mobile-bottom-nav-bar {
+        display: none;
+    }
+    .mobile-top, .hilia-loader, .hilia-mobile-cart, .mobile-checkout {
+        display: none;
+    }
+    .oe_cart {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 200px){
+    .is-breadcrumb, #footer, .oe_cart, ul.wizard, #right_column, a.cd-top {display: none !important}
+    .thanks_msg a {display: none !important}
+}
+@media (max-width: 767px){
+    .mobile-bottom-nav-bar {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        height: 40px;
+        width: 100%;
+        background-color: #c6cbcf;
+        z-index: 1000;
+        padding:0px;
+        margin: 0px;
+        text-align: center;
+    }
+    .mobile-nav-button {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .mobile-col {
+        height: 40px;
+    }
+    .mobile-col-2 {
+        height: 40px;
+        height: 40px;
+    }
+    .mobile-col-3 {
+        width: 30%
+    }
+    .mobile-col-4 {
+        width: 40%
+    }
+    .mobile-col-5 {
+        width: 50%
+    }
+    .mobile-col-6 {
+        width: 58%
+    }
+    .extra-circle {
+        background-color: #c6cbcf;
+        width:60px;
+        height:60px;
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        border-radius: 45%;
+        margin-left: -30px;
+        z-index: 999;
+    }
+    .mobile-main-image{
+        padding:5px;
+        width: 60px;
+        height: 60px;
+    }
+
+    #wrapwrap{
+        background-color: #2f4353;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: linear-gradient(#fff 5%, #99a6af 85%);
+        font-family: ElMessiri-Bold, Lateef;
+    }
+
+
+    .navbar {display: none;}
+
+    .mobile-top .logo {text-align: center; padding:20px}
+    .mobile-top .cart {padding: 0}
+    .mobile-top .cart .notification {float: left; padding-left: 10px;}
+    .mobile-top .cart .cart {float: right; padding-right: 10px;}
+    .mobile-top .search > i{
+        font-size:20pt;
+        padding-right: 0;
+    }
+
+    .mobile-top .categories {
+        width: 100%;
+        text-align: center;
+        padding: 10px
+    }
+    .mobile-top .category-item {
+        display: inline-block;
+        margin: 2px;
+    }
+
+    .input-icons i { 
+        position: absolute; 
+        left: 0;
+        font-size:16pt;
+    } 
+      
+    .input-icons { 
+        width: 90%; 
+        margin-bottom: 10px; 
+        vertical-align: middle;
+        display: inline-block;
+        padding-left: 10px;
+    } 
+      
+    .icon { 
+        padding: 10px; 
+        color: #99a6af; 
+        min-width: 50px; 
+        text-align: center; 
+    } 
+      
+    .input-field { 
+        width: 100%; 
+        padding: 10px; 
+        text-align: center; 
+    }
+
+    .hilia-loader {
+        position: fixed;
+        top:0;
+        left:0;
+        padding:0;
+        margin:0;
+        width: 100%;
+        height: 100%;
+        z-index: 100000;
+        background-color: #2f4353;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: linear-gradient(#fff 5%, #99a6af 85%);
+    }
+
+    .hilia-loader .spining {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -60px;
+        
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+    }
+    .hilia-loader .loading-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: 40px;
+        margin-left: -60px;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+    .hilia-cart-item{
+        display: relative;
+        width: 98%;
+        margin-right: 1%;
+        margin-left: 1%;
+        background-color: #eeeff1;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .hilia-cart-item .remove-button {
+        position: absolute;
+        top:0;
+        left:0;
+        margin-left: 0;
+        margin-top: -10px;
+        font-size: 14pt;
+        color: darkred;
+    }
+
+    .hilia-cart-item .item-image {
+        float: left;
+        text-align: center;
+    }
+    .hilia-cart-item .item-description {
+        float: right;
+        padding-right: 10px;
+    }
+
+    .discount-code{background-color: #eeeff1; width:98%; margin: 1%;}
+    .discount-code .dsicount-text {width:60%; float: right; padding-right: 10px; vertical-align: middle;}
+    .discount-code .dsicount-action {width:38%; float: left}
+    .discount-code .dsicount-action .discount {width:50%;}
+
+    .cart-summary {
+        position: fixed;
+        bottom: 40px;
+        left:0;
+        width: 100%;
+        height: 180px;
+        margin: 0;
+        background-color: #fff;
+        font-size: 12pt;
+        font-weight: bold;
+        font-style: italic;
+    
+    }
+
+    .space-filling{
+        height: 80px;
+    }
+}
+
+
+@media (max-width: 379px){
+    .mobile-top .category-item img {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+@media (max-width: 340px){
+    .mobile-top .category-item img {
+        width: 44px;
+        height: 44px;
+    }
+}
+@media (max-width: 324px){
+    .input-icons i { 
+        position: absolute; 
+        left: 0;
+        font-size:12pt;
+    } 
+      
+    .input-icons { 
+        width: 88%; 
+        margin-bottom: 10px; 
+        vertical-align: middle;
+        display: inline-block;
+        padding-left: 0;
+    } 
+      
+    .icon { 
+        padding: 10px; 
+        color: #99a6af; 
+        min-width: 50px; 
+        text-align: center; 
+    } 
+      
+    .input-field { 
+        width: 100%; 
+        padding: 10px; 
+        text-align: center; 
+    } 
+
+    .mobile-top .category-item img {
+        width: 24px;
+        height: 24px;
+    }
+}
+}
