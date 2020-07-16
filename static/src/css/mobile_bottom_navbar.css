@@ -28,11 +28,27 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 200px){
-    .is-breadcrumb, #footer, .oe_cart, ul.wizard, #right_column, a.cd-top {display: none !important}
+@media (max-width: 767px) and (min-width: 0px){
+    .navbar, .is-breadcrumb, #footer, .oe_cart, ul.wizard, #right_column, a.cd-top {display: none !important}
     .thanks_msg a {display: none !important}
 }
 @media (max-width: 767px){
+    .oe_website_login_container{  
+        margin: 80px;
+        border-radius: 10px;
+    }
+    .oe_website_login_container button {
+        display: block;
+        width: 100%;
+    }
+    #wrapwrap{
+        background-color: #2f4353;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: linear-gradient(#fff 5%, #99a6af 85%);
+        font-family: ElMessiri-Bold, Lateef;
+    }
+    
     .mobile-bottom-nav-bar {
         position: fixed;
         bottom: 0px;
@@ -85,16 +101,6 @@
         height: 60px;
     }
 
-    #wrapwrap{
-        background-color: #2f4353;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-image: linear-gradient(#fff 5%, #99a6af 85%);
-        font-family: ElMessiri-Bold, Lateef;
-    }
-
-
-    .navbar {display: none;}
 
     .mobile-top .logo {text-align: center; padding:20px}
     .mobile-top .cart {padding: 0}
@@ -154,7 +160,7 @@
         background-color: #2f4353;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-image: linear-gradient(#fff 5%, #99a6af 85%);
+        background-image: linear-gradient(#fff 5%, #99a6af 35%);
     }
 
     .hilia-loader .spining {
@@ -187,6 +193,7 @@
         background-color: #eeeff1;
         border-radius: 10px;
         padding: 10px;
+        margin: 10px;
     }
 
     .hilia-cart-item .remove-button {
@@ -223,8 +230,7 @@
         background-color: #fff;
         font-size: 12pt;
         font-weight: bold;
-        font-style: italic;
-    
+        font-style: italic; 
     }
 
     .space-filling{
@@ -233,10 +239,19 @@
 }
 
 
-@media (max-width: 379px){
+@media (max-width: 421px){
     .mobile-top .category-item img {
         width: 54px;
         height: 54px;
+    }
+}
+@media (max-width: 421px){
+    .mobile-top .category-item img {
+        width: 54px;
+        height: 54px;
+    }
+    .mobile-top .category-item a span {
+        font-size: 12px;
     }
 }
 
@@ -246,6 +261,7 @@
         height: 44px;
     }
 }
+
 @media (max-width: 324px){
     .input-icons i { 
         position: absolute; 
@@ -278,5 +294,4 @@
         width: 24px;
         height: 24px;
     }
-}
 }

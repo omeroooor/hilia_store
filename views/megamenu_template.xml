@@ -2,6 +2,7 @@
 <odoo>
     <template id="hilia_submenu" inherit_id="theme_laze.submenu" name="Hilia Submenu">
         <xpath expr="//div[1]" position="attributes">
+            <attribute name="dir">ltr</attribute>
             <attribute name="t-attf-class">mm-maga-main mm-mega-list #{submenu.content_id.main_content_type=='category_list_3' and 'mm-mega-cat-level' or ''} #{ submenu.content_id.no_of_columns and 'mm-mega-'+str(submenu.content_id.no_of_columns) or ''}</attribute>
         </xpath>
         <xpath expr="//div[1]" position="inside">

@@ -62,10 +62,26 @@ msgstr "اساور"
 msgid "Children"
 msgstr "اطفال"
 
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_mobille_address
+msgid "City"
+msgstr "المدينة"
+
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_collections
 msgid "Collections"
 msgstr "كوليكشن"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_mobille_address
+msgid "Country"
+msgstr "دولة"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_mobille_address
+msgid "Country..."
+msgstr "الدولة..."
 
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_boys_daggers
@@ -195,6 +211,16 @@ msgstr "القياس والحجر"
 #: model:product.public.category,name:hilia_store.product_public_category_men_rings_sizes
 msgid "Sizes"
 msgstr "المقاسات"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_mobille_address
+msgid "State / Province"
+msgstr "الدولة / المنطقة"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_mobille_address
+msgid "State / Province..."
+msgstr "الدولة / المنطقة..."
 
 #. module: hilia_store
 #: model:product.public.category,name:hilia_store.product_public_category_children_boys_sticks
