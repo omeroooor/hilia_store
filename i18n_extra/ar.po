@@ -122,3 +122,63 @@ msgstr "<strong>طريقة الدفع:</strong>"
 #: model:ir.ui.view,arch_db:website_sale.confirmation
 msgid "<strong>Payment information:</strong>"
 msgstr "<strong>معلومات الدفع:</strong>"
+
+
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.continue_shopping
+msgid "<span class=\"fa fa-long-arrow-left\"/>\n"
+"                <span class=\"hidden-xs\">Continue Shopping</span>\n"
+"                <span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<span class=\"fa fa-long-arrow-right\"/><span class=\"hidden-xs\">عودة للتسوق</span><span class=\"visible-xs-inline\">عودة</span>"
+
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.cart
+msgid "<span class=\"hidden-xs\">Process Checkout</span>\n"
+"                                <span class=\"visible-xs-inline\">Checkout</span>\n"
+"                                <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "<span class=\"hidden-xs\">مواصلة الدفع</span><span class=\"visible-xs-inline\">دفع</span> <span class=\"fa fa-long-arrow-left\"/>"
+
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.wizard_checkout
+msgid "Review Order<span class=\"chevron\"/>"
+msgstr "مراجعة الطلب<span class=\"chevron\"/>"
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.wizard_checkout
+msgid "Shipping &amp;"
+msgstr "الشحن و "
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.wizard_checkout
+msgid "Billing<span class=\"chevron\"/>"
+msgstr "الفوترة<span class=\"chevron\"/>"
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.wizard_checkout
+msgid "Confirmation<span class=\"chevron\"/>"
+msgstr "التأكيد<span class=\"chevron\"/>"
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.extra_info_option
+#: model:ir.ui.view,arch_db:website_sale.wizard_checkout
+msgid "Payment<span class=\"chevron\"/>"
+msgstr "السداد<span class=\"chevron\"/>"
+
+
+#. module: website_sale
+#: code:addons/website_sale/controllers/main.py:496
+#, python-format
+msgid "Some required fields are empty."
+msgstr "بعض الحقول إجبارية"
+
+
+
+
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.clear_all
+msgid "<span class=\"fa fa-trash-o\"/> <span class=\"hidden-xs\">Clear Shopping Cart </span><span class=\"visible-xs-inline\">Clear Shopping Cart</span>"
+msgstr "<span class=\"hidden-xs\">إفراغ عربة التسوق </span><span class=\"visible-xs-inline\">إفراغ عربة التسوق</span> <span class=\"fa fa-trash-o\"/>"

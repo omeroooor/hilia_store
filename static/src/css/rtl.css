@@ -7,3 +7,27 @@
     right: auto !important;
     border-radius: 30px 0 0 30px !important;
 }
+
+@media (min-width: 768px){
+    .mm-maga-main {
+        text-align: right !important;
+    }
+    .mm-maga-main.mm-mega-cat-level .mm-category-level .mm-cat-level-1 .mm-cat-level-2 {
+        right: 25% !important;
+    }
+    .mm-maga-main.mm-mega-cat-level .mm-cat-list {
+        float: right !important;
+    }
+    .mm-maga-main.mm-mega-cat-level .mm-category-level .mm-cat-level-1 .cat-level-title.active-li > a:after {
+        left: -1px;
+        right: auto !important;
+        border-left: 16px solid #fff;
+        border-right: 0px solid #fff !important;
+    }
+    .mm-maga-main.mm-mega-cat-level .mm-category-level .mm-cat-level-1 .cat-level-title.active-li > a:before {
+        left: 0px;
+        right: auto !important;
+        border-left: 16px solid #eee;
+        border-right: 0px solid #eee !important;
+    }
+}
