@@ -264,3 +264,27 @@ msgstr "نساء"
 msgid "megamenu.content"
 msgstr "megamenu.content"
 
+
+
+#. module: hilia_store
+#: model:ir.model.fields,field_description:hilia_store.field_product_product_is_shipping_service
+#: model:ir.model.fields,field_description:hilia_store.field_product_template_is_shipping_service
+msgid "Is shipping service?"
+msgstr "هل المنتج يمثل خدمة توصيل؟"
+
+
+#. module: hilia_store
+#: model:ir.model.fields,field_description:hilia_store.field_sale_order_shipping_fees
+msgid "Shipping Fees"
+msgstr "رسوم التوصيل"
+
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.hilia_shipping_fees
+msgid "<span class=\"col-xs-6 text-right text-muted\"> Shipping Fees:</span>"
+msgstr "<span class=\"col-xs-6 text-right text-muted\"> رسوم التوصيل:</span>"
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.total
+msgid "<span class=\"col-xs-6 text-right text-muted\" title=\"Taxes may be updated after providing shipping address\"> Taxes:</span>"
+msgstr "<span class=\"col-xs-6 text-right text-muted\" title=\"قد يتم تحديث الضريبة بعد تزويد معلومات التوصيل\"> الضريبة:</span>"
+

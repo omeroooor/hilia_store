@@ -10,6 +10,7 @@
         'views/product_view.xml',
         'views/megamenu_view.xml',
         'views/megamenu_template.xml',
+        'views/website_setting.xml',
     ], 
     'installable': True,
     'application': True,

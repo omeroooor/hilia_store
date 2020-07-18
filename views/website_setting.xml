@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_website_config_settings_hilia_shipping" model="ir.ui.view">
+        <field name="name">Website config Add hilia shipping</field>
+        <field name="model">website.config.settings</field>
+        <field name="inherit_id" ref="website_sale.website_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='delivery']/label[@for='module_delivery_ups']" position="before">
+                <label for="shipping_fees" string="Shipping Cost"/>
+                <div>
+                    <group>
+                        <group>
+                            <field name="shipping_fees"/>
+                            <field name="minimum_for_free_shipping"/>
+                        </group>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
