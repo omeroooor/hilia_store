@@ -38,13 +38,10 @@ class SaleOrder(models.Model):
                     break
             # apply shipping if not already applied
             if not shipping_fees_applied:
-                shipping_service_id = self.env['product.template'].search([('is_shipping_service','=',True)], limit=1)
+                shipping_service_id = self.env['product.product'].search([('is_shipping_service','=',True)], limit=1)
                 if shipping_service_id:
                     if shipping_service_id:
-                        self.env['sale.order.line'].create({
-                            'order_id': order.id,
-                            'product_id': shipping_service_id.id,
-                        })
+                        order._cart_update(shipping_service_id.id, add_qty=1)
                         shipping_fees = shipping_service_id.website_public_price
         res.update({'shipping_fees': shipping_fees})
         #raise ValidationError(shipping_fees)
