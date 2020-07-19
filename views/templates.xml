@@ -337,9 +337,9 @@
         <xpath expr="//div[@id='wrap']/div[1]/div[1]/div[2]" position="attributes">
             <attribute name="style">display: block !important;</attribute>
         </xpath>
-        <xpath expr="//tbody/tr[1]" position="attributes">
+        <!--xpath expr="//tbody/tr[1]" position="attributes">
             <attribute name="t-if">not line.product_id.is_shipping_service</attribute>
-        </xpath>
+        </xpath-->
     </template>
 
     <template id="hilia_mobille_confirmation" inherit_id="website_sale.confirmation" name="Hilia Confirmation">
@@ -380,7 +380,7 @@
     </template>
     
 
-    <template id="hilia_shipping_fees" inherit_id="website_sale.total" name="Hilia Shipping Fees">
+    <!--template id="hilia_shipping_fees" inherit_id="website_sale.total" name="Hilia Shipping Fees">
         <xpath expr="//div[@id='order_total_untaxed']" position="after">
             <div class="row" id="order_total_shipping_fees" t-if="website_sale_order.shipping_fees &gt; 0">
                 <span class="col-xs-6 text-right text-muted"> Shipping Fees:</span>
@@ -389,6 +389,6 @@
                 </span>
             </div>
         </xpath>
-    </template>
+    </template-->
 
 </odoo>
