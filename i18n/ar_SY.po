@@ -283,6 +283,11 @@ msgstr "رسوم التوصيل"
 msgid "<span class=\"col-xs-6 text-right text-muted\"> Shipping Fees:</span>"
 msgstr "<span class=\"col-xs-6 text-right text-muted\"> رسوم التوصيل:</span>"
 
+#. module: hilia_store
+#: model:ir.ui.view,arch_db:hilia_store.layout_mobile_bottom_nav_bar
+msgid "Search"
+msgstr "بحث"
+
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.total
 msgid "<span class=\"col-xs-6 text-right text-muted\" title=\"Taxes may be updated after providing shipping address\"> Taxes:</span>"
