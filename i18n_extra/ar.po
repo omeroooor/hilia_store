@@ -466,7 +466,155 @@ msgstr "<i class=\"fa fa-shopping-cart\"/>\n"
 
 
 
+
 #. module: theme_laze
 #: model:ir.ui.view,arch_db:theme_laze.clear_all
 msgid "<span class=\"fa fa-trash-o\"/> <span class=\"hidden-xs\">Clear Shopping Cart </span><span class=\"visible-xs-inline\">Clear Shopping Cart</span>"
-msgstr "<span class=\"hidden-xs\">إفراغ عربة التسوق </span><span class=\"visible-xs-inline\">إفراغ عربة التسوق</span> <span class=\"fa fa-trash-o\"/>"
+msgstr "<span class=\"hidden-xs\">إفراغ سلة التسوق</span><span class=\"visible-xs-inline\">إفراغ سلة التسوق</span> <span class=\"fa fa-trash-o\"/>"
+
+
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.product_slider_content
+#: model:ir.ui.view,arch_db:theme_laze.snippet_products_item
+msgid "<span>Add to Cart</span> <i class=\"fa fa-shopping-cart\"/>"
+msgstr "<span>اضف الى السلة </span> <i class=\"fa fa-shopping-cart\"/>"
+
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.product_details
+#: model:ir.ui.view,arch_db:theme_laze.products_add_to_cart
+msgid "Add to Cart"
+msgstr "أضف إلى السلة"
+
+
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.product_cart
+msgid "Checkout"
+msgstr "إكمال الشراء"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.product_cart
+msgid "item(s) <i class=\"fa fa-shopping-cart\"/> <span class=\"fa fa-angle-down\"/>"
+msgstr "item(s) <i class=\"fa fa-shopping-cart\"/> <span class=\"fa fa-angle-down\"/>"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "Hello,"
+msgstr "مرحباً,"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "<i class=\"fa fa-heart-o\"/> Wishlist"
+msgstr "<i class=\"fa fa-heart-o\"/> المفضلة"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "<i class=\"fa fa-key\"/> Login"
+msgstr "<i class=\"fa fa-key\"/> دخول"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "<i class=\"fa fa-key\"/> Register"
+msgstr "<i class=\"fa fa-key\"/> تسجيل"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "<i class=\"fa fa-plus-circle\"/>Add..."
+msgstr "<i class=\"fa fa-plus-circle\"/>إضافة..."
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "<i class=\"fa fa-sign-out\"/> Logout"
+msgstr "<i class=\"fa fa-sign-out\"/> خروج"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "<i class=\"fa fa-user\"/> My Account"
+msgstr "<i class=\"fa fa-user\"/> حسابي"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "Account <i class=\"fa fa-angle-down\"/>"
+msgstr "الحساب <i class=\"fa fa-angle-down\"/>"
+
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Cart"
+msgstr "سلة التسوق"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "<span>Add to Cart</span>"
+msgstr "<span>أضف إلى السلة</span>"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "<span>Clear Wishlist</span>"
+msgstr "<span>تفريغ المفضلة</span>"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "<strong>Add to Cart</strong>"
+msgstr "<strong>أضف إلى السلة</strong>"
+
+#. module: theme_laze
+#: model:ir.model.fields,field_description:theme_laze.field_product_wishlist_comment
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Comment"
+msgstr "تعليق"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Delete"
+msgstr "حذف"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Name"
+msgstr "الاسم"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Price"
+msgstr "سعر"
+
+#. module: theme_laze
+#: model:ir.model.fields,field_description:theme_laze.field_product_wishlist_product_id
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Product"
+msgstr "المنتج"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Product Wishlist"
+msgstr "قائمة المفضلة"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Update Comment"
+msgstr "تحديث التعليق"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.wishlist
+msgid "Your Whishlist is empty!"
+msgstr "ليس لديك عناصر بقائمة المفضلة"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.footer_default
+msgid "Advanced Search"
+msgstr "بحث متقدم"
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.layout
+msgid "Search"
+msgstr "بحث"
+
+
+
+#. module: website
+#: model:ir.ui.view,arch_db:website.website_search_box
+msgid "Search..."
+msgstr "بحث ..."
